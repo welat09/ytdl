@@ -122,7 +122,6 @@ func (formats *FormatList) addByInfo(info formatInfo, adaptive bool) error {
 			format.AdaptiveStream.Codecs = params["codecs"]
 		}
 	}
-
 	*formats = append(*formats, format)
 	return nil
 }

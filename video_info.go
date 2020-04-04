@@ -170,6 +170,7 @@ func (c *Client) getVideoInfoFromHTML(cx context.Context, id string, html []byte
 		if err != nil {
 			return nil, err
 		}
+		//glog.Errorf("jsonCOnfig %s\n\n", jsonConfig.Args.PlayerResponse)
 	} else {
 		log.Debug().Msg("Unable to extract json from default url, trying embedded url")
 

@@ -27,6 +27,7 @@ type Range struct {
 	End   string `json:"end"`
 }
 
+
 func (r *Range) String() string {
 	return r.Start + "-" + r.End
 }
