@@ -165,7 +165,7 @@ func (c *Client) getVideoInfoFromHTML(cx context.Context, id string, html []byte
 
 	// match json in javascript
 	if matches := regexpPlayerConfig.FindSubmatch(html); len(matches) > 1 {
-		data := append(matches[1], []byte("}")...)
+		data := matches[1]
 		err := json.Unmarshal(data, &jsonConfig)
 		if err != nil {
 			return nil, err
